@@ -8,7 +8,7 @@ import (
 
 func ColorToStr(c Color) string {
 	if c.UseW {
-		return fmt.Sprintf("%d%", c.W)
+		return fmt.Sprintf("%.2f%% white", float32(c.W)/float32(255)*100)
 	} else {
 		return fmt.Sprintf("#%x", []byte{c.R, c.G, c.B})
 	}
