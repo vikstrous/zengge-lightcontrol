@@ -8,20 +8,17 @@ import (
 	"github.com/vikstrous/zengge-lightcontrol/local"
 )
 
-var transport *local.Transport
-var controller *control.Controller
-
-func init() {
-	var err error
-	transport, err = local.NewTransport("home.viktorstanchev.com:5577")
+func connect() *control.Controller {
+	transport, err := local.NewTransport("home.viktorstanchev.com:5577")
 	if err != nil {
 		fmt.Printf("Failed to connect. %s", err)
-		return
+		return nil
 	}
-	controller = &control.Controller{transport}
+	return &control.Controller{transport}
 }
 
 func handlerOn(w http.ResponseWriter, r *http.Request) {
+	controller := connect()
 	err := controller.SetPower(true)
 	if err != nil {
 		fmt.Printf("Failed to set power. %s", err)
@@ -31,6 +28,7 @@ func handlerOn(w http.ResponseWriter, r *http.Request) {
 }
 
 func handlerOff(w http.ResponseWriter, r *http.Request) {
+	controller := connect()
 	err := controller.SetPower(false)
 	if err != nil {
 		fmt.Printf("Failed to set power. %s", err)
@@ -40,6 +38,7 @@ func handlerOff(w http.ResponseWriter, r *http.Request) {
 }
 
 func handlerState(w http.ResponseWriter, r *http.Request) {
+	controller := connect()
 	state, err := controller.GetState()
 	if err != nil {
 		fmt.Printf("Failed to get state. %s", err)
@@ -53,6 +52,7 @@ func handlerState(w http.ResponseWriter, r *http.Request) {
 }
 
 func handlerColor(w http.ResponseWriter, r *http.Request) {
+	controller := connect()
 	r.ParseForm()
 	colorStr := r.FormValue("color")
 	color := control.ParseColorString(colorStr)
