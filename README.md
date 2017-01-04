@@ -11,6 +11,7 @@ This command line tool and library uses what they call the "2014 protocol". The 
 ## Example usage
 
 ```
+go get github.com/vikstrous/zengge-lightcontrol/cmd/zengge-lightcontrol
 zengge-lightcontrol local --host 1.2.3.4:5577 set-power off
 ```
 
