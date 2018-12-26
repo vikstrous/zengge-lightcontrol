@@ -7,6 +7,7 @@ github.com/russross/blackfriday v0.0.0-20151117072312-300106c228d5/go.mod h1:JO/
 github.com/shurcooL/sanitized_anchor_name v0.0.0-20151028001915-10ef21a441db h1:lrOUn8raSZS/V52c7elGaEyuogqSkEo/Qj2Auo2G1ik=
 github.com/shurcooL/sanitized_anchor_name v0.0.0-20151028001915-10ef21a441db/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
 github.com/shurcooL/sanitized_anchor_name v0.0.0-20181105074220-86672fcb3f95/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
+github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
 github.com/spf13/cobra v0.0.0-20151124153217-1c44ec8d3f15 h1:x2QTuHA5vXuhN7ZzzJNnGNItiOsvFZrq23mWI5qLjAE=
 github.com/spf13/cobra v0.0.0-20151124153217-1c44ec8d3f15/go.mod h1:1l0Ry5zgKvJasoi3XT1TypsSe7PqH0Sj9dhYf7v3XqQ=
 github.com/spf13/pflag v0.0.0-20151013200643-08b1a584251b h1:BnumbFpjTS6VXEbk2Xwk7CTt0HjRyX1rKAzaKTENl6A=
